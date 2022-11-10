@@ -21,7 +21,7 @@ import random
 
 boolean = True
 while boolean:
-  num = input("Type a number for an upper bound: ")
+  num = input("Type the number for an upper bound: ")
   if num.isdigit():
     num = int(num)
     boolean = False
@@ -32,7 +32,16 @@ guess = None
 count = 0
 while guess != secret:
   guess = input("Type a number between 1 and " + str(num) + ": ")
-  count += 1
   guess = int(guess)
-  if guess == secret:
-    print(count)
+  count += 1
+  if guess != secret:
+    print("Try again")
+    if guess > secret:
+      print("Lower")
+    else: 
+      print("Higher")
+else:
+      if (count == 1):
+        print("It took you " +str(count)+ " try")
+      else:
+        print("It took you " +str(count)+ " tries")

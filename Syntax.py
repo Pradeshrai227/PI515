@@ -20,7 +20,8 @@
 import random
 
 boolean = True
-while boolean:
+playing = True
+while boolean and playing:
   num = input("Type the number for an upper bound: ")
   if num.isdigit():
     num = int(num)
@@ -29,19 +30,25 @@ while boolean:
     print ("Invalid input. Try agian.")
 secret = random.randint(1, num)
 guess = None
+limit = int(input("Add guess limit "))
 count = 0
-while guess != secret:
-  guess = input("Type a number between 1 and " + str(num) + ": ")
-  guess = int(guess)
-  count += 1
-  if guess != secret:
-    print("Try again")
-    if guess > secret:
-      print("Lower")
-    else: 
-      print("Higher")
-else:
-      if (count == 1):
-        print("It took you " +str(count)+ " try")
-      else:
-        print("It took you " +str(count)+ " tries")
+while guess != secret and count < limit:
+    guess = input("Type a number between 1 and " + str(num) + ": ")
+    guess = int(guess)
+    count += 1
+    if guess == secret:
+      print("Winner")
+    if guess != secret and count != limit:
+      print("Try again")
+      if guess > secret:
+        print("Lower")
+      else: 
+        print("Higher")
+if guess == secret:
+  if (count == 1):
+    print("It took you " +str(count)+ " try")
+  else:
+    print("It took you " +str(count)+ " tries")
+elif (guess != secret):
+  print("Loser")
+playing = input("Type True to try again, Type False to quite: ")

@@ -3,7 +3,7 @@ import random
 options = ["rock", "paper", "scissors"]
 computer = (random.choice(options))
 user = None
-print('Lets Play Rock, Paper, Sciccors\n')
+print('Lets Play Rock, Paper, Sciccors.\n')
 
 
 while user not in options:
@@ -27,6 +27,4 @@ elif user == 'Scissors'and computer == 'paper':
   print("\nI guess you Won")
 
 elif user == 'paper' and computer == 'rock':
-  user-print("\nUSER: I Beat You")
-  if user-print == "I Beat You":
-    print("Computer: Shut Up")
+  print("\nUSER: I Beat You")

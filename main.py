@@ -3,21 +3,30 @@ import random
 options = ["rock", "paper", "scissors"]
 computer = (random.choice(options))
 user = None
-0<1
-1<2
-0>2
+print('Lets Play Rock, Paper, Sciccors\n')
 
 
 while user not in options:
-  user = input("Pick Rock, Paper, or Scissors: ").lower()
+  user = input("\nPick Rock, Paper, or Scissors: ").lower()
 print("You Picked: " + user)
 print("I Picked: " + computer)
 if user == computer:
-  print("Tie Lame")
+  print("\nTie Lame")
 
 
-elif user == 0 and computer == 2:
-  print("WOW it Worked You're a Winner")
+elif user == 'rock' and computer == 'scissors':
+  print("\nWOW it Worked You're a Winner")
 
-elif user == 1 and computer ==2:
-  print("Goodjob you LOSE!")
+elif user == 'paper' and computer == 'scissors':
+  print("\nGoodjob you LOSE!")
+
+elif user == 'rock' and computer == 'paper':
+  print("\nYou lost Loser")
+
+elif user == 'Scissors'and computer == 'paper':
+  print("\nI guess you Won")
+
+elif user == 'paper' and computer == 'rock':
+  user-print("\nUSER: I Beat You")
+  if user-print == "I Beat You":
+    print("Computer: Shut Up")

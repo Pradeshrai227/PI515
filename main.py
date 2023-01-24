@@ -28,3 +28,4 @@ elif user == 'Scissors'and computer == 'paper':
 
 elif user == 'paper' and computer == 'rock':
   print("\nUSER: I Beat You")
+  print("\nComputer: Shut Up")

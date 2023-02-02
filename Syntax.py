@@ -30,14 +30,14 @@ while boolean and playing:
     print ("Invalid input. Try agian.")
 secret = random.randint(1, num)
 guess = None
-limit = int(input("Add guess limit "))
+limit = int(input("\nAdd guess limit "))
 count = 0
 while guess != secret and count < limit:
     guess = input("Type a number between 1 and " + str(num) + ": ")
     guess = int(guess)
     count += 1
     if guess == secret:
-      print("Winner")
+      print("\nWinner")
     if guess != secret and count != limit:
       print("Try again")
       if guess > secret:
@@ -50,5 +50,6 @@ if guess == secret:
   else:
     print("It took you " +str(count)+ " tries")
 elif (guess != secret):
-  print("Loser")
+  print("\nLoser")
+  print("\nThe correct number was: "+ str(secret))
 playing = input("Type True to try again, Type False to quite: ")
